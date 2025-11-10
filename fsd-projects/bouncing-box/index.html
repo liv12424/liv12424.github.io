@@ -90,9 +90,17 @@
 
               positionX = positionX + speed;
               variableName = variableName + 3; // Adds 3 to variableName
-              if (positionX < boardWidth) {
+              if (positionX > boardWidth) {
       speed *= -1;
       }
+      if (positionX < 0) {
+speed *= -1;
+}
+speed = 3 * points + 10;
+
+git add .
+git commit -m "completed bouncing box project"
+git push
 
 
 
