@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Bin</title>
+    <style>
+      img {
+        position: absolute;
+        top: 300px;
+        left: 600px;
+        width: 70px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="photography"
+      src="https://www.adorama.com/alc/wp-content/uploads/2021/04/photography-camera-learning-feature.jpg"
+    />
+  </body>
+</html>
+
+<script>
+  var x = 400;
+  var y = 100;
+
+  
+  //make box bounce
+  //change the box directions if it location gets to the cornor of the screen
+  var direction = 20
+  setInterval(boxMover, 100);
+  function boxMover() {
+    document.getElementById("photography").style.top = y + "px";
+    document.getElementById("photography").style.left = x + "px";
+    x = x + direction;
+   y = y + direction;
+    if (x > 1300){
+      direction = -20
+    }
+    if (x < 0){
+      direction = 20
+    }
+    if (y > 80){
+      direction = 20
+    }
+    if (y < 0){
+      direction = 20
+    }
+  }
+</script>
